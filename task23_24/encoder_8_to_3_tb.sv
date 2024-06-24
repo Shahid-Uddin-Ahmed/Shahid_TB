@@ -8,7 +8,7 @@ module encoder_8_to_3_tb;
     
     logic     clk;          // simulation timing clock
     logic [7:0] D=0;          // Input data
-    logic [2:0] Y;          // Output data
+  logic [2:0] Y;          // Output data ulta-palta
 
   //////////////////////////////////////////////////////////////////////////////
   //-VARIABLES
