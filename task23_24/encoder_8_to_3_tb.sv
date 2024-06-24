@@ -109,7 +109,16 @@ module encoder_8_to_3_tb;
    @(posedge clk);
               //repeat (5) bin_in <= ($urandom);
    repeat (100) begin 
-        D_dvr_mbx.put ($urandom);
+       randcase
+           1: D_dvr_mbx.put(8'b00000001);
+           1: D_dvr_mbx.put(8'b00000010);
+           1: D_dvr_mbx.put(8'b00000100);
+           1: D_dvr_mbx.put(8'b00001000);
+           1: D_dvr_mbx.put(8'b00010000);
+           1: D_dvr_mbx.put(8'b00100000);
+           1: D_dvr_mbx.put(8'b01000000);
+           1: D_dvr_mbx.put(8'b10000000);
+       endcase
    end
    //Delay
    //#1000;
